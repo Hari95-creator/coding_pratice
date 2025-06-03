@@ -1,4 +1,4 @@
-public class StringCompression {
+public class StringCompression {                                                
 
     public static String compressString(String s){
 

@@ -17,8 +17,7 @@ public class Pivot {
 
         int leftSum = 0;
         for (int i = 0; i < pivotArray.size(); i++) {
-            
-            int rightSum = totalSum - leftSum - pivotArray.get(i);
+            int rightSum = totalSum - leftSum - pivotArray.get(i);                                                                                                                                                                          
             if (leftSum == rightSum) {
                 return i; 
             }

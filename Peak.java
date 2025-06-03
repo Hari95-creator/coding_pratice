@@ -42,7 +42,7 @@ public class Peak {
 
     public static void main(String[] args){
 
-        int arr[]={54,11,24,13};
+        int arr[]={54,11,24,13      };
 
         ArrayList<Integer> list=new ArrayList<>();
 

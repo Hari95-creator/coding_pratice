@@ -16,7 +16,7 @@ public class LongestSusbstringWithoutRepeating {
 
             char currentChar=word.charAt(right);
 
-            //this will remove  to shrink the window from left to right
+            //this will remove  to shrink the window from left to right 
             while(charSet.contains(currentChar)){
 
                 charSet.remove(word.charAt(left));

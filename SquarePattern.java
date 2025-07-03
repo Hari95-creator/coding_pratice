@@ -22,15 +22,6 @@ public class SquarePattern {
 
         }
 
-
-        for(int k=0;k<=rows;k++){
-
-            for(int z=0;z<=rows-1;z++){
-
-                System.out.print(" ");
-            }
-        }
-
     }
 
 }

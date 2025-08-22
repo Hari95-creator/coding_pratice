@@ -58,7 +58,7 @@ public class EmployeeSalary{
         double firstHighestSalary=Double.MIN_VALUE;
         Double secondHighestSalary=Double.MIN_VALUE;
         
-        Employee EMPLOYEEdETAILS=null;
+        Employee EMPLOYEEDETAILS=null;
 
         for(Employee e : employee){
 
@@ -89,15 +89,15 @@ public class EmployeeSalary{
 
                 if(details.getEmpSalary()==secondHighestSalary){
                     
-                    EMPLOYEEdETAILS=details;
+                    EMPLOYEEDETAILS=details;
                     break;
 
                 }
 
             }
 
-            System.out.println("Employee Name :"+EMPLOYEEdETAILS.getEmpName());
-            System.out.println("Employee Id :"+EMPLOYEEdETAILS.getEmpId());
+            System.out.println("Employee Name :"+EMPLOYEEDETAILS.getEmpName());
+            System.out.println("Employee Id :"+EMPLOYEEDETAILS.getEmpId());
             System.out.println("Second Highest salary : " + secondHighestSalary);
             
             

@@ -5,6 +5,7 @@ public class MagicSquare {
         int magicSum = 0;
         int squareLength = n.length;
 
+
         // first row
         for (int i = 0; i < squareLength; i++) {
             magicSum += n[0][i];

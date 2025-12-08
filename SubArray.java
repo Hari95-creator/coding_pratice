@@ -1,36 +1,33 @@
 public class SubArray {
 
+    public static void maximumSubArraySum(int[] arr, int k) {
 
-    public static void maximumSubArraySum(int[] arr,int k){
+        int windowSum = 0;
+        int maxSum = 0;
 
-        int windowSum=0;
-        int maxSum=0;
+        for (int i = 0; i < k; i++) {
 
-        for(int i=0;i< k;i++){
-
-            windowSum +=arr[i];
+            windowSum += arr[i];
 
         }
 
-         maxSum = windowSum;
+        maxSum = windowSum;
 
-        for(int j=k;j< arr.length;j++){
+        for (int j = k; j < arr.length; j++) {
 
-            windowSum += arr[j]-arr[j-k];
+            windowSum += arr[j] - arr[j - k];
 
             maxSum = Math.max(maxSum, windowSum);
         }
 
-        
         System.out.println("Maximum Sum of Subarray of size " + k + " is: " + maxSum);
     }
 
+    public static int miniSubArray(int nums[], int target) {
 
-    public static void minimalSubArray(int arr[],int k){
-
-         int left = 0;
+        int left = 0;
+        int minValue = Integer.MAX_VALUE;
         int windowSum = 0;
-        int minLen = Integer.MAX_VALUE;
 
         for (int right = 0; right < nums.length; right++) {
 
@@ -40,35 +37,34 @@ public class SubArray {
 
                 int currentLen = right - left + 1;
 
-                if (currentLen < minLen) {
-                    minLen = currentLen;
+                if (currentLen < minValue) {
+
+                    minValue = currentLen;
                 }
 
                 windowSum -= nums[left];
                 left++;
+
             }
+
+            
         }
 
-        if (minLen == Integer.MAX_VALUE) {
-            return 0;
-        }
+        return minValue;
 
-
-    }
-
-
-
-
-
-
-    public static void main(String[] args){
-
-
-        int arr[]={2,1,5,1,3,2};
-        int k=3;
-
-        maximumSubArraySum(arr,k);
-
-    }
     
+    }
+
+    public static void main(String[] args) {
+
+        int arr[] = { 2, 1, 5, 1, 3, 2 };
+        int k = 3;
+
+       maximumSubArraySum(arr, k);
+       int minLen= miniSubArray(arr,k);
+
+       System.out.println(minLen);
+
+    }
+
 }

@@ -1,7 +1,7 @@
 public class SubArray {
 
 
-    public static void subArraySum(int[] arr,int k){
+    public static void maximumSubArraySum(int[] arr,int k){
 
         int windowSum=0;
         int maxSum=0;
@@ -11,6 +11,8 @@ public class SubArray {
             windowSum +=arr[i];
 
         }
+
+         maxSum = windowSum;
 
         for(int j=k;j< arr.length;j++){
 
@@ -34,7 +36,7 @@ public class SubArray {
         int arr[]={2,1,5,1,3,2};
         int k=3;
 
-        subArraySum(arr,k);
+        maximumSubArraySum(arr,k);
 
     }
     

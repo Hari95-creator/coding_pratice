@@ -26,6 +26,37 @@ public class SubArray {
     }
 
 
+    public static void minimalSubArray(int arr[],int k){
+
+         int left = 0;
+        int windowSum = 0;
+        int minLen = Integer.MAX_VALUE;
+
+        for (int right = 0; right < nums.length; right++) {
+
+            windowSum += nums[right];
+
+            while (windowSum >= target) {
+
+                int currentLen = right - left + 1;
+
+                if (currentLen < minLen) {
+                    minLen = currentLen;
+                }
+
+                windowSum -= nums[left];
+                left++;
+            }
+        }
+
+        if (minLen == Integer.MAX_VALUE) {
+            return 0;
+        }
+
+
+    }
+
+
 
 
 

@@ -47,12 +47,15 @@ public class SubArray {
 
             }
 
-            
         }
 
-        return minValue;
+        if(minValue == Integer.MAX_VALUE){
+            return 0;
+        }else{
 
-    
+            return minValue; 
+        }
+
     }
 
     public static void main(String[] args) {
@@ -60,10 +63,10 @@ public class SubArray {
         int arr[] = { 2, 1, 5, 1, 3, 2 };
         int k = 3;
 
-       maximumSubArraySum(arr, k);
-       int minLen= miniSubArray(arr,k);
+        maximumSubArraySum(arr, k);
+        int minLen = miniSubArray(arr, k);
 
-       System.out.println(minLen);
+        System.out.println(minLen);
 
     }
 

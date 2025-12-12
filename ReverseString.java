@@ -1,7 +1,7 @@
 public class ReverseString{
 
     public static void reverseCheck(String name){
-
+ 
         String reverse="";
         char str[]=name.toCharArray();
 
